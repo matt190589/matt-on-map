@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import capitalData from "../../lib/data";
+import ClueBox from "../components/ClueBox";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,24 +17,18 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}></div>
-
-        <div className="">
+      <div className="container">
+        <div className="header">
           <h1>MATT ON A MAP</h1>
-          <div className={styles.card}>Hello</div>
-          <div className={styles.card}>Hello</div>
         </div>
-        <div className={styles.grid}>
-          <div>
-            <h1>Clue 1: {capitalData[0].population}</h1>
-            <h1>Clue 4: {capitalData[0].continent}</h1>
-            <h1>Clue 5: {capitalData[0].firstLetter}</h1>
-          </div>
-          <h1>Clue 2: Map outline</h1>
-          <h1>Clue 3: Flag</h1>
+        <div className="content content-left">
+          <p>Guesses</p>
         </div>
-      </main>
+        <div className="content content-right">
+          <p>Image</p>
+        </div>
+        <ClueBox />
+      </div>
     </>
   );
 }
