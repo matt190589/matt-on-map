@@ -17,17 +17,23 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="container">
-        <div className="header">
-          <h1>MATT ON A MAP</h1>
+      <div className="header">
+        <h1>MATT ON A MAP</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="column">
+            <div class="left-column">
+              <h1>Guesses</h1>
+            </div>
+          </div>
+          <div class="column">
+            <div class="right-column">
+              <h1>Image</h1>
+            </div>
+          </div>
+          <ClueBox />
         </div>
-        <div className="content content-left">
-          <p>Guesses</p>
-        </div>
-        <div className="content content-right">
-          <p>Image</p>
-        </div>
-        <ClueBox />
       </div>
     </>
   );
