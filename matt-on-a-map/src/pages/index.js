@@ -1,14 +1,16 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.css";
 import capitalData from "../../lib/data";
 import ClueBox from "../components/ClueBox";
+import GuessInput from "@/components/GuessInput";
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   console.log(capitalData);
+  
   return (
     <>
       <Head>
@@ -25,6 +27,7 @@ export default function Home() {
           <div class="column">
             <div class="left-column">
               <h1>Guesses</h1>
+              <GuessInput/>
             </div>
           </div>
           <div class="column">
