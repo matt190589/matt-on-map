@@ -6,7 +6,7 @@ import ClueBox from "../components/ClueBox";
 export default function Guessinput(props) {
   const [guess, setGuess] = useState("");
 
-  const MAX_GUESSES = 6;
+  const MAX_GUESSES = 5;
 
   const userGuess = (event) => {
     console.log(event.target.value);
