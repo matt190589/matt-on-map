@@ -9,7 +9,7 @@ export default function ClueBox(props) {
   return (
     <div className="row">
       <div className="short-column">
-        <div className="left-column">
+        <div className="left-column clue-font">
           <h2>Clue 1: </h2>
           {guessLists.length > 0 ? <h2>{capitalData[0].population}</h2> : ""}
           <h2>Clue 4: </h2>
@@ -18,7 +18,7 @@ export default function ClueBox(props) {
           {guessLists.length > 4 ? <h2>{capitalData[0].firstLetter}</h2> : ""}
         </div>
       </div>
-      <div className="short-column">
+      <div className="short-column image">
         <div className="right-column">
           <h2>Clue 2: </h2>
           {guessLists.length > 1 ? (
@@ -28,7 +28,7 @@ export default function ClueBox(props) {
           )}
         </div>
       </div>
-      <div className="short-column">
+      <div className="short-column image">
         <div className="right-column">
           <h2>Clue 3 :</h2>
           {guessLists.length > 2 ? (

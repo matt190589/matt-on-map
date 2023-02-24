@@ -31,14 +31,16 @@ export default function Guessinput(props) {
 
   return (
     <div>
-      <form onSubmit={handleGuessButtonClick}>
+      <form className="button-container" onSubmit={handleGuessButtonClick}>
         <input
+          className="text-input-box"
           placeholder="Enter your guess"
           type="text"
           onChange={userGuess}
           value={guess}
         ></input>
-        <button>Guess</button>
+        <br></br>
+        <button className="guess-button">Guess</button>
       </form>
       <ul>
         {props.guessLists.map((guessList) => (
