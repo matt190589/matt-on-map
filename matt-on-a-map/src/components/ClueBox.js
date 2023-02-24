@@ -1,26 +1,41 @@
 import capitalData from "lib/data";
+import Image from "next/image";
 
 export default function ClueBox(props) {
   const guessLists = props.guessLists;
+  const mapUrl = capitalData[0].countryMapUrl;
+  const flagUrl = capitalData[0].countryflagUrl;
+  console.log(mapUrl);
   return (
     <div className="row">
       <div className="short-column">
         <div className="left-column">
-          <h2>
-            Clue 1: {capitalData[0].population} Length: {guessLists.length}
-          </h2>
-          <h2>Clue 4: {capitalData[0].continent}</h2>
-          <h2>Clue 5: {capitalData[0].firstLetter}</h2>
+          <h2>Clue 1: </h2>
+          {guessLists.length > 0 ? <h2>{capitalData[0].population}</h2> : ""}
+          <h2>Clue 4: </h2>
+          {guessLists.length > 3 ? <h2>{capitalData[0].continent}</h2> : ""}
+          <h2>Clue 5: </h2>
+          {guessLists.length > 4 ? <h2>{capitalData[0].firstLetter}</h2> : ""}
         </div>
       </div>
       <div className="short-column">
         <div className="right-column">
-          <h2>Clue 2: Map outline</h2>
+          <h2>Clue 2: </h2>
+          {guessLists.length > 1 ? (
+            <img src={mapUrl} alt="map outline" width={200} height={200} />
+          ) : (
+            ""
+          )}
         </div>
       </div>
       <div className="short-column">
         <div className="right-column">
-          <h2>Clue 3: Flag</h2>
+          <h2>Clue 3 :</h2>
+          {guessLists.length > 2 ? (
+            <img src={flagUrl} alt="country flag" width={200} height={200} />
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>
