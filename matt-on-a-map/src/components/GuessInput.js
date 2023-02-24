@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import GuessList from "./GuessList";
+import ClueBox from "../components/ClueBox";
 
-export default function Guessinput() {
+export default function Guessinput(props) {
   const [guess, setGuess] = useState("");
-  const [guessLists, setGuessLists] = useState([]);
 
   const MAX_GUESSES = 6;
 
@@ -15,18 +15,15 @@ export default function Guessinput() {
   };
 
   const handleGuessButtonClick = (e) => {
-    let guessesAttempted = 0;
-    if (guessLists.length < MAX_GUESSES) {
+    if (props.guessLists.length < MAX_GUESSES) {
       e.preventDefault();
       if (!guess);
       const newGuess = {
         id: Date.now(),
         userGuess: guess,
       };
-      setGuessLists([...guessLists, newGuess]);
+      props.onGuessListChange([...props.guessLists, newGuess]);
       setGuess("");
-      console.log(guessLists);
-      console.log(guessLists.length);
     } else {
       alert("You have reached the max number of guess. Try again tomorrow.");
     }
@@ -44,7 +41,7 @@ export default function Guessinput() {
         <button>Guess</button>
       </form>
       <ul>
-        {guessLists.map((guessList) => (
+        {props.guessLists.map((guessList) => (
           <GuessList key={guessList.id} guessList={guessList} />
         ))}
       </ul>

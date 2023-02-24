@@ -9,7 +9,11 @@ import { useState } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  console.log(capitalData);
+  const [guessLists, setGuessLists] = useState([]);
+
+  const handleGuessListChange = (newGuessLists) => {
+    setGuessLists(newGuessLists);
+  };
 
   return (
     <>
@@ -27,7 +31,10 @@ export default function Home() {
           <div className="column">
             <div className="left-column">
               <h1>Guesses</h1>
-              <GuessInput />
+              <GuessInput
+                guessLists={guessLists}
+                onGuessListChange={handleGuessListChange}
+              />
             </div>
           </div>
           <div className="column">
@@ -35,7 +42,7 @@ export default function Home() {
               <h1>Image</h1>
             </div>
           </div>
-          <ClueBox />
+          <ClueBox guessLists={guessLists} />
         </div>
       </div>
     </>
