@@ -6,6 +6,8 @@ export default function Guessinput() {
   const [guess, setGuess] = useState("");
   const [guessLists, setGuessLists] = useState([]);
 
+  const MAX_GUESSES = 6;
+
   const userGuess = (event) => {
     console.log(event.target.value);
     const value = event.target.value.toLowerCase();
@@ -13,15 +15,21 @@ export default function Guessinput() {
   };
 
   const handleGuessButtonClick = (e) => {
-    e.preventDefault();
-    if (!guess);
-    const newGuess = {
-      id: Date.now(),
-      userGuess: guess,
-    };
-    setGuessLists([...guessLists, newGuess]);
-    setGuess("");
-    console.log(guessLists);
+    let guessesAttempted = 0;
+    if (guessLists.length < MAX_GUESSES) {
+      e.preventDefault();
+      if (!guess);
+      const newGuess = {
+        id: Date.now(),
+        userGuess: guess,
+      };
+      setGuessLists([...guessLists, newGuess]);
+      setGuess("");
+      console.log(guessLists);
+      console.log(guessLists.length);
+    } else {
+      alert("You have reached the max number of guess. Try again tomorrow.");
+    }
   };
 
   return (

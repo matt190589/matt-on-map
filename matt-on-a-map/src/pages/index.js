@@ -10,8 +10,6 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   console.log(capitalData);
-  const NUMBER_OF_TRIES = 6;
-  const guessesAttempted = 0;
 
   return (
     <>
