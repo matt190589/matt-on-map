@@ -2,9 +2,11 @@ import React from "react";
 import { useState } from "react";
 import GuessList from "./GuessList";
 import ClueBox from "../components/ClueBox";
+import capitalData from "lib/data";
 
 export default function Guessinput(props) {
   const [guess, setGuess] = useState("");
+  // const [gamePlay, setGamePlay] = useState("playing");
 
   const MAX_GUESSES = 5;
 
@@ -23,9 +25,17 @@ export default function Guessinput(props) {
         userGuess: guess,
       };
       props.onGuessListChange([...props.guessLists, newGuess]);
+      checkIfCorrect();
       setGuess("");
     } else {
       alert("You have reached the max number of guess. Try again tomorrow.");
+    }
+  };
+  const mattLocation = capitalData[0].capital.toLowerCase();
+
+  const checkIfCorrect = () => {
+    if (guess === mattLocation) {
+      alert("Well done. You found Matt today!");
     }
   };
 

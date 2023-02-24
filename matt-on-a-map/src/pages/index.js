@@ -32,6 +32,11 @@ export default function Home() {
           <div className="column">
             <div className="left-column clue-font">
               <h1>Guesses</h1>
+              <h3>
+                Matt loves travelling and he's off on an adventure visiting all
+                the capital cities of the world. Every day he'll be in a
+                different city. Your job is to find him!
+              </h3>
               <GuessInput
                 guessLists={guessLists}
                 onGuessListChange={handleGuessListChange}

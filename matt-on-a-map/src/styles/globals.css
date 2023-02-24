@@ -2,6 +2,11 @@ h1 {
     text-align: center;
 }
 
+h3 { 
+    margin: 15px;
+    padding-bottom: 10px;
+}
+
 .container {
     margin: 15px;
     background-color: white;
@@ -31,7 +36,7 @@ h1 {
 }
 
 .left-column {
-    background-color: lightgreen;
+    background-color: #9ACBFF;
     height: 500px;
     border: 1px solid black;
     margin: 2px;
@@ -57,7 +62,7 @@ h1 {
  
 .guess-button {
     align-items: center;
-    background-color: #9ACBFF;
+    background-color: rgba(55, 252, 74, 0.811);
     border-radius: 12px;
     box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, .1) 0 6px 20px;
     box-sizing: border-box;
