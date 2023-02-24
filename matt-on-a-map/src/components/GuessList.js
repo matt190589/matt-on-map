@@ -1,7 +1,9 @@
 export default function GuessList({ guessList }) {
   return (
     <div>
-      <li>{guessList.userGuess}</li>
+      <li>
+        <h2>{guessList.userGuess}</h2>
+      </li>
     </div>
   );
 }

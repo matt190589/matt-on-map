@@ -5,6 +5,7 @@ import capitalData from "../../lib/data";
 import ClueBox from "../components/ClueBox";
 import GuessInput from "@/components/GuessInput";
 import { useState } from "react";
+import mattLogo from "../../public/Images/matt-on-a-map-image.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +30,7 @@ export default function Home() {
       <div className="container">
         <div className="row">
           <div className="column">
-            <div className="left-column">
+            <div className="left-column clue-font">
               <h1>Guesses</h1>
               <GuessInput
                 guessLists={guessLists}
@@ -39,7 +40,13 @@ export default function Home() {
           </div>
           <div className="column">
             <div className="right-column">
-              <h1>Image</h1>
+              <Image
+                className="image-logo"
+                src={mattLogo}
+                alt="world map"
+                width={500}
+                height={500}
+              />
             </div>
           </div>
           <ClueBox guessLists={guessLists} />
