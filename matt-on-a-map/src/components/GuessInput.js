@@ -1,7 +1,10 @@
+import React from "react";
 import { useState } from "react";
+import GuessList from "./GuessList";
 
 export default function Guessinput() {
   const [guess, setGuess] = useState("");
+  const [guessLists, setGuessLists] = useState([]);
 
   const userGuess = (event) => {
     console.log(event.target.value);
@@ -11,19 +14,32 @@ export default function Guessinput() {
 
   const handleGuessButtonClick = (e) => {
     e.preventDefault();
-    addGuess(guess);
+    if (!guess);
+    const newGuess = {
+      id: Date.now(),
+      userGuess: guess,
+    };
+    setGuessLists([...guessLists, newGuess]);
     setGuess("");
+    console.log(guessLists);
   };
 
   return (
     <div>
-      <input
-        placeholder="Enter your guess"
-        type="text"
-        onChange={userGuess}
-        value={guess}
-      ></input>
-      <button>Guess</button>
+      <form onSubmit={handleGuessButtonClick}>
+        <input
+          placeholder="Enter your guess"
+          type="text"
+          onChange={userGuess}
+          value={guess}
+        ></input>
+        <button>Guess</button>
+      </form>
+      <ul>
+        {guessLists.map((guessList) => (
+          <GuessList key={guessList.id} guessList={guessList} />
+        ))}
+      </ul>
     </div>
   );
 }

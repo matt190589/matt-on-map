@@ -10,7 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   console.log(capitalData);
-  
+  const NUMBER_OF_TRIES = 6;
+  const guessesAttempted = 0;
+
   return (
     <>
       <Head>
@@ -22,16 +24,16 @@ export default function Home() {
       <div className="header">
         <h1>MATT ON A MAP</h1>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="column">
-            <div class="left-column">
+      <div className="container">
+        <div className="row">
+          <div className="column">
+            <div className="left-column">
               <h1>Guesses</h1>
-              <GuessInput/>
+              <GuessInput />
             </div>
           </div>
-          <div class="column">
-            <div class="right-column">
+          <div className="column">
+            <div className="right-column">
               <h1>Image</h1>
             </div>
           </div>
