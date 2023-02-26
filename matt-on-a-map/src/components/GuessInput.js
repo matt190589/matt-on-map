@@ -4,12 +4,16 @@ import GuessList from "./GuessList";
 import capitalData from "lib/data";
 import { useStore } from "./Store";
 import { saveData } from "./Store";
+import { getDayKey, getDayOfTheYear } from "./DayYear";
 
 export default function Guessinput(props) {
   const [guess, setGuess] = useState("");
   const [gameResult, setGameResult] = useState("playing");
 
   const MAX_GUESSES = 5;
+
+  const dayOfTheYear = getDayOfTheYear();
+  const dayKey = getDayKey();
 
   const userGuess = (event) => {
     console.log(event.target.value);
