@@ -1,5 +1,7 @@
 //Development of app from MVP
 
+//Expand the logic for the check win
+
 //Create the day and date function
 //Look for an API with any the object data required
 //Add validation to the user input
