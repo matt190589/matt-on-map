@@ -4,13 +4,28 @@ import { Inter } from "@next/font/google";
 import capitalData from "../../lib/data";
 import ClueBox from "../components/ClueBox";
 import GuessInput from "@/components/GuessInput";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import mattLogo from "../../public/Images/matt-on-a-map-image.png";
+import { saveData } from "../components/Store";
+import { getData } from "../components/Store";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [guessLists, setGuessLists] = useState([]);
+
+  useEffect(() => {
+    if (JSON.parse(localStorage.getItem("guessLists"))) {
+      //check if there is a guessList
+      JSON.parse(localStorage.getItem("guessLists"));
+    }
+  }, []);
+
+  useEffect(() => {
+    if (guessLists !== []) {
+      localStorage.setItem("guessLists", JSON.stringify(guessLists));
+    }
+  }, [guessLists]);
 
   const handleGuessListChange = (newGuessLists) => {
     setGuessLists(newGuessLists);
