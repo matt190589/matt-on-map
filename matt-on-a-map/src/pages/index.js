@@ -4,7 +4,7 @@ import { Inter } from "@next/font/google";
 import capitalData from "../../lib/data";
 import ClueBox from "../components/ClueBox";
 import GuessInput from "@/components/GuessInput";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import mattLogo from "../../public/Images/matt-on-a-map-image.png";
 import { saveData } from "../components/Store";
 import { getData } from "../components/Store";
@@ -14,18 +14,21 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   const [guessLists, setGuessLists] = useState([]);
 
+  useEffect(() => {
+    if (JSON.parse(localStorage.getItem("guessLists"))) {
+      //check if there is a guessList
+      JSON.parse(localStorage.getItem("guessLists"));
+    }
+  }, []);
+
+  useEffect(() => {
+    if (guessLists !== []) {
+      localStorage.setItem("guessLists", JSON.stringify(guessLists));
+    }
+  }, [guessLists]);
+
   const handleGuessListChange = (newGuessLists) => {
     setGuessLists(newGuessLists);
-    // saveData("test", { message: "Hello world" });
-    // const test = getData("test");
-    // console.log(test); // should output { message: "Hello world" }
-    // console.log("props", newGuessLists);
-    // saveData("guessList", newGuessLists);
-    localStorage.setItem("test", "Hello world");
-    const value = localStorage.getItem("test");
-    console.log(value); // should output "Hello world"
-    const valueRetrieve = localStorage.getItem("test");
-    console.log("retrieve", valueRetrieve);
   };
 
   return (
