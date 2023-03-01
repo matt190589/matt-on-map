@@ -6,8 +6,7 @@ import ClueBox from "../components/ClueBox";
 import GuessInput from "@/components/GuessInput";
 import { useState, useEffect } from "react";
 import mattLogo from "../../public/Images/matt-on-a-map-image.png";
-import { saveData } from "../components/Store";
-import { getData } from "../components/Store";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,14 +14,16 @@ export default function Home() {
   const [guessLists, setGuessLists] = useState([]);
 
   useEffect(() => {
-    if (JSON.parse(localStorage.getItem("guessLists"))) {
+    const storedGuessLists = JSON.parse(localStorage.getItem("guessLists"));
+    if (storedGuessLists) {
       //check if there is a guessList
-      JSON.parse(localStorage.getItem("guessLists"));
+      setGuessLists(storedGuessLists);
+      console.log(storedGuessLists);
     }
   }, []);
 
   useEffect(() => {
-    if (guessLists !== []) {
+    if (guessLists.length) {
       localStorage.setItem("guessLists", JSON.stringify(guessLists));
     }
   }, [guessLists]);
