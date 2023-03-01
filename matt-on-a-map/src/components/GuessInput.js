@@ -2,8 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import GuessList from "./GuessList";
 import capitalData from "lib/data";
-import { useStore } from "./Store";
-import { saveData } from "./Store";
 import { getDayKey, getDayOfTheYear } from "./DayYear";
 
 export default function Guessinput(props) {
