@@ -14,9 +14,13 @@ export default function Guessinput(props) {
   const dayKey = getDayKey();
 
   const userGuess = (event) => {
-    console.log(event.target.value);
     const value = event.target.value.toLowerCase();
-    setGuess(value);
+    const regex = /^[a-zA-Z\s]+$/; //only allow letters
+    if (regex.test(value)) {
+      setGuess(value);
+    } else {
+      alert("Please only enter letters");
+    }
   };
 
   const handleGuessButtonClick = (e) => {
