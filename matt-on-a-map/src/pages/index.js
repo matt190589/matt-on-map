@@ -7,7 +7,6 @@ import GuessInput from "@/components/GuessInput";
 import { useState, useEffect } from "react";
 import mattLogo from "../../public/Images/matt-on-a-map-image.png";
 
-
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -31,6 +30,7 @@ export default function Home() {
   const handleGuessListChange = (newGuessLists) => {
     setGuessLists(newGuessLists);
   };
+  const dayNum = 1;
 
   return (
     <>
@@ -70,7 +70,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <ClueBox guessLists={guessLists} />
+          <ClueBox guessLists={guessLists} dayNum={dayNum} />
         </div>
       </div>
     </>

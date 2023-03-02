@@ -7,6 +7,7 @@
 //Look for an API with any the object data required
 //Add validation to the user input ✅
 //Input validation with regex ✅
+//Input validation to stop blank guesses
 //Need to implement testing for this function
 //Replace the alert with more appropriate pop up
 //Implement local storage to allow users records to be recorded
