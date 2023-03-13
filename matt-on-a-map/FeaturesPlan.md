@@ -4,7 +4,7 @@
 
 //Create the day and date function ✅
 //Implement these into a function that clears localStorage at midnight each day
-//Look for an API with any the object data required
+//Look for an API with any the object data required or create my own
 //Add validation to the user input ✅
 //Input validation with regex ✅
 //Input validation to stop blank guesses
@@ -16,6 +16,19 @@
 //Overhaul the CSS layout when thee final logic is complete
 //Rebuild the layout
 //work towards a mobiile first version
-//Possible pop out cards for clues 2 & 3
+//Possible pop out cards for clues 2 & 3 -Modals
 
 //Deploy on netlify or Vercel
+
+//Update to plan 13.03
+// App will now be to guess the country rather than capital
+// Find out to clear local storage at midnight everyday
+// Build modals for the images
+//Rearrange the clue order
+
+//Create a backend to store all the data
+//one object is generated everyday from first guess
+//Need to complete the data table first
+
+//Navbar with stats
+//Stats again will use local storage
