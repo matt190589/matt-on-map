@@ -7,6 +7,7 @@ import { getDayKey, getDayOfTheYear } from "./DayYear";
 export default function Guessinput(props) {
   const [guess, setGuess] = useState("");
   const [gameResult, setGameResult] = useState("playing");
+  const [submitEnabled, setSubmitEnabled] = useState(false);
 
   const MAX_GUESSES = 5;
 
@@ -14,12 +15,17 @@ export default function Guessinput(props) {
   const dayKey = getDayKey();
 
   const userGuess = (event) => {
-    const value = event.target.value.toLowerCase();
+    const value = event.target.value.toLowerCase().trim();
     const regex = /^[a-zA-Z\s]+$/; //only allow letters
-    if (regex.test(value)) {
-      setGuess(value);
-    } else {
+    if (value.length === 0) {
+      setSubmitEnabled(false);
+    } else if (!regex.test(value)) {
+      setSubmitEnabled(false);
       alert("Please only enter letters");
+    } else {
+      setGuess(value);
+      console.log("type", value);
+      setSubmitEnabled(true);
     }
   };
 
@@ -34,7 +40,7 @@ export default function Guessinput(props) {
     checkGameResult();
     setGuess("");
   };
-  const mattLocation = capitalData[0].capital.toLowerCase();
+  const mattLocation = capitalData[1].capital.toLowerCase();
   console.log(mattLocation);
 
   const checkIfCorrect = () => {
@@ -70,7 +76,10 @@ export default function Guessinput(props) {
           disabled={gameResult !== "playing"} // disable input field if game is won or lost
         ></input>
         <br></br>
-        <button className="guess-button" disabled={gameResult !== "playing"}>
+        <button
+          className="guess-button"
+          disabled={gameResult !== "playing" || !submitEnabled}
+        >
           Guess
         </button>
       </form>
