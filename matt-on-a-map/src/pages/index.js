@@ -50,8 +50,8 @@ export default function Home() {
               <h1>Guesses</h1>
               <h3>
                 Matt loves travelling and he's off on an adventure visiting all
-                the capital cities of the world. Every day he'll be in a
-                different city. Your job is to find him!
+                the countries of the world. Every day he'll be in a different
+                place. Your job is to find him!
               </h3>
               <GuessInput
                 guessLists={guessLists}

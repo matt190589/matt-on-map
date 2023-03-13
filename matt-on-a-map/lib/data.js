@@ -2,7 +2,8 @@ const capitalData = [
   {
     id: 1,
     capital: "London",
-    countryMapUrl: "https://www.itraveluk.co.uk/images/maps/england.png",
+    countryMapUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/England_%28orthographic_projection%29.svg/600px-England_%28orthographic_projection%29.svg.png?20140603111157",
     population: "8,799,800",
     countryflagUrl:
       "https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg",
