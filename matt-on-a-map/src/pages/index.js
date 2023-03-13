@@ -27,6 +27,26 @@ export default function Home() {
     }
   }, [guessLists]);
 
+  useEffect(() => {
+    const clearLocalStorage = () => {
+      localStorage.removeItem("guessLists");
+    };
+
+    const now = new Date();
+    const nextMidnight = new Date(
+      now.getFullYear(),
+      now.getMonth(),
+      now.getDate() + 1
+    );
+    const timeToMidnight = nextMidnight - now;
+
+    const timeoutId = setTimeout(() => {
+      clearLocalStorage();
+      setInterval(clearLocalStorage, 24 * 60 * 60 * 1000); //Repeat every 24 hours
+    }, timeToMidnight);
+    return () => clearTimeout(timeoutId);
+  }, []);
+
   const handleGuessListChange = (newGuessLists) => {
     setGuessLists(newGuessLists);
   };
