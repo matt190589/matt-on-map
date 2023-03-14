@@ -1,4 +1,4 @@
-export default function Modal({ open, map }) {
+export default function Modal({ open, map, onClose }) {
   //function takes reacts when user clicks
   //click enhances the size of the clue box
   //Modal centres on the screen
@@ -6,9 +6,17 @@ export default function Modal({ open, map }) {
   //Background is light blue and transparent or grayish
   if (!open) return null;
   return (
-    <div className="overlay">
-      <div className="modalContainer">
+    <div onClick={onClose} className="overlay">
+      <div
+        // onClick={(e) => {
+        //   e.stopPropagation();
+        // }}
+        className="modalContainer"
+      >
         <img src={map} alt="country outline" />
+        <p onClick={onClose} className="closeBtn">
+          X
+        </p>
       </div>
     </div>
   );
