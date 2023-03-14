@@ -1,7 +1,10 @@
 import capitalData from "lib/data";
 import Image from "next/image";
+import Modals from "./Modals";
+import { useState } from "react";
 
 export default function ClueBox(props) {
+  const [openModal, setOpenModal] = useState(false);
   const guessLists = props.guessLists;
   const mapUrl = capitalData[props.dayNum].countryMapUrl;
   const flagUrl = capitalData[props.dayNum].countryflagUrl;
@@ -33,6 +36,8 @@ export default function ClueBox(props) {
       <div className="short-column image">
         <div className="right-column">
           <h2>Clue 2: Flag </h2>
+          <button onClick={() => setOpenModal(true)}>Modal</button>;
+          <Modals open={openModal} map={mapUrl} />
           {guessLists.length > 1 ? (
             <img src={mapUrl} alt="map outline" width={200} height={200} />
           ) : (

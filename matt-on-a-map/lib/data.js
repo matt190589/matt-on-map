@@ -15,7 +15,7 @@ const capitalData = [
     id: 2,
     capital: "Beijing",
     countryMapUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Afghanistan_%28orthographic_projection%29.svg/1106px-Afghanistan_%28orthographic_projection%29.svg.png?20190727144652",
     population: "21,893,095",
     countryflagUrl:
       "https://upload.wikimedia.org/wikipedia/commons/7/78/People%27s_Republic_of_China_%28orthographic_projection%29.svg",
