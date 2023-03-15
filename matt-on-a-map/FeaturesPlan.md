@@ -23,7 +23,9 @@
 //Update to plan 13.03
 // App will now be to guess the country rather than capital
 // Find out to clear local storage at midnight everyday
+//Done but needs tested on deployment
 // Build modals for the images
+//Done but require aligning with current divs
 //Rearrange the clue order
 
 //Create a backend to store all the data
@@ -32,3 +34,5 @@
 
 //Navbar with stats
 //Stats again will use local storage
+
+//Think about how to use e.stopPropagation with the modals

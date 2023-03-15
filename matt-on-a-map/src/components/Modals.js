@@ -1,4 +1,4 @@
-export default function Modal({ open, map, onClose }) {
+export default function Modal({ open, pic, onClose }) {
   //function takes reacts when user clicks
   //click enhances the size of the clue box
   //Modal centres on the screen
@@ -13,7 +13,7 @@ export default function Modal({ open, map, onClose }) {
         // }}
         className="modalContainer"
       >
-        <img src={map} alt="country outline" />
+        <img src={pic} alt="country outline" />
         <p onClick={onClose} className="closeBtn">
           X
         </p>

@@ -15,10 +15,10 @@ const capitalData = [
     id: 2,
     capital: "Beijing",
     countryMapUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Afghanistan_%28orthographic_projection%29.svg/1106px-Afghanistan_%28orthographic_projection%29.svg.png?20190727144652",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/EU-Netherlands.svg/1920px-EU-Netherlands.svg.png",
     population: "21,893,095",
     countryflagUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/7/78/People%27s_Republic_of_China_%28orthographic_projection%29.svg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Angola.svg",
     continent: "Asia",
     firstLetter: "B",
     wikipediapage: "https://en.wikipedia.org/wiki/Beijing",

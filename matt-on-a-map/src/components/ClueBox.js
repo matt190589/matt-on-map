@@ -4,7 +4,9 @@ import Modals from "./Modals";
 import { useState } from "react";
 
 export default function ClueBox(props) {
-  const [openModal, setOpenModal] = useState(false);
+  const [openFlagModal, setOpenFlagModal] = useState(false);
+  const [openMapModal, setOpenMapModal] = useState(false);
+
   const guessLists = props.guessLists;
   const mapUrl = capitalData[props.dayNum].countryMapUrl;
   const flagUrl = capitalData[props.dayNum].countryflagUrl;
@@ -20,7 +22,7 @@ export default function ClueBox(props) {
             ""
           )}
           <h2>Clue 3: Continent </h2>
-          {guessLists.length > 3 ? (
+          {guessLists.length > 2 ? (
             <h2>{capitalData[props.dayNum].continent}</h2>
           ) : (
             ""
@@ -36,14 +38,22 @@ export default function ClueBox(props) {
       <div className="short-column image">
         <div className="right-column">
           <h2>Clue 2: Flag </h2>
-          <button onClick={() => setOpenModal(true)}>Modal</button>
-          <Modals
-            open={openModal}
-            map={mapUrl}
-            onClose={() => setOpenModal(false)}
-          />
           {guessLists.length > 1 ? (
-            <img src={mapUrl} alt="map outline" width={200} height={200} />
+            <div>
+              {" "}
+              <img
+                src={flagUrl}
+                alt="country flag"
+                width={200}
+                height={200}
+                onClick={() => setOpenFlagModal(true)}
+              />
+              <Modals
+                open={openFlagModal}
+                pic={flagUrl}
+                onClose={() => setOpenFlagModal(false)}
+              />
+            </div>
           ) : (
             ""
           )}
@@ -52,8 +62,21 @@ export default function ClueBox(props) {
       <div className="short-column image">
         <div className="right-column">
           <h2>Clue 4: Map outline</h2>
-          {guessLists.length > 2 ? (
-            <img src={flagUrl} alt="country flag" width={200} height={200} />
+          {guessLists.length > 3 ? (
+            <div>
+              <img
+                src={mapUrl}
+                alt="country outline"
+                width={200}
+                height={200}
+                onClick={() => setOpenMapModal(true)}
+              />
+              <Modals
+                open={openMapModal}
+                pic={mapUrl}
+                onClose={() => setOpenMapModal(false)}
+              />
+            </div>
           ) : (
             ""
           )}
