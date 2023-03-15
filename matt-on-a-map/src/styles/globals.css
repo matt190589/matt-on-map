@@ -10,7 +10,7 @@ h3 {
 .container {
     margin: 15px;
     background-color: white;
-    padding: 0px 300px 300px;
+    padding: 0px 25% 300px;
 }
 
 .row {
@@ -37,14 +37,14 @@ h3 {
 
 .left-column {
     background-color: #9ACBFF;
-    height: 500px;
+    height: auto;
     border: 1px solid black;
     margin: 2px;
 }
 
 .right-column {
     background-color: white;
-    height: 500px;
+    height: auto;
     border: 1px solid;
     margin: 2px;
 }
@@ -95,7 +95,7 @@ h3 {
  .text-input-box {
     border-radius: 10px;
     padding: 10px;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     display: block;
     margin: 0 auto;
@@ -126,7 +126,7 @@ h3 {
 }
 
 .modalContainer {
-    max-width: 510px;
+    max-width: 400px;
     width: 100%;
     position: fixed;
     top: 40%;
@@ -154,15 +154,22 @@ h3 {
 }
 
 @media screen and (max-width: 500px) {
+    .container {
+        padding: 5px;
+    }
     .modalContainer {
         flex-direction: column;
         top: 0;
         left: 0;
         transform: none;
         width: 100%;
-        height: 100vh;
+        height: auto;
     }
         .modalContainer img {
             width: 100%;
+            height: auto;
+        }
+        .column {
+            flex-basis: 50%;
         }
 }
