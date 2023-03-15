@@ -36,3 +36,6 @@
 //Stats again will use local storage
 
 //Think about how to use e.stopPropagation with the modals
+
+//Bugs
+// Input box only always you to delete all characters but one
