@@ -7,6 +7,9 @@ export default function Navbar() {
       <div className="navbar-logo">
         <img src="/favicon.ico" alt="Logo" />
       </div>
+      <div className="header">
+        <h1>MATT ON A MAP</h1>
+      </div>
       <ul className="navbar-links">
         <li>
           <a href="#">Rules</a>

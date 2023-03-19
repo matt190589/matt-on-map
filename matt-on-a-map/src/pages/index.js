@@ -61,11 +61,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-      <div className="header">
-        <h1>MATT ON A MAP</h1>
-      </div>
       <div className="container">
+        <Navbar />
         <div className="row">
           <div className="column">
             <div className="left-column clue-font">
