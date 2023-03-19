@@ -172,4 +172,46 @@ h3 {
         .column {
             flex-basis: 50%;
         }
+         .navbar-links {
+            display: none;
+        }
+        .navbar-menu {
+            display: block;
+}
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.navbar-logo img {
+    height: 40px;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    margin-right: 1rem;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.navbar-links li a:hover {
+    color: #000;
+}
+
+.navbar-menu {
+    display: none;
 }

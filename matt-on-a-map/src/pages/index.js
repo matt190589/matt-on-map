@@ -6,6 +6,7 @@ import ClueBox from "../components/ClueBox";
 import GuessInput from "@/components/GuessInput";
 import { useState, useEffect } from "react";
 import mattLogo from "../../public/Images/matt-on-a-map-image.png";
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,11 +56,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
-        <meta name="matt on a map game" content="" Geography game />
+        <title>Matt on a Map</title>
+        <meta name="matt on a map game" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Navbar />
       <div className="header">
         <h1>MATT ON A MAP</h1>
       </div>

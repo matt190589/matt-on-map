@@ -10,7 +10,7 @@
 //Input validation to stop blank guesses
 //Need to implement testing for this function
 //Replace the alert with more appropriate pop up
-//Implement local storage to allow users records to be recorded
+//Implement local storage to allow users records to be recorded ✅
 //Next stage is to work on saving user daily statistics ✅
 
 //Overhaul the CSS layout when thee final logic is complete
