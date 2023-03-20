@@ -184,10 +184,13 @@ h3 {
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
+    font-size: 1.5rem;
 }
 
-.navbar-logo img {
-    height: 40px;
+.navbar-help a {
+    /* font-size: 3rem; */
+    color: #333;
+    text-decoration: none;
 }
 
 .navbar-links {
@@ -197,13 +200,17 @@ h3 {
     padding: 0;
 }
 
+.navbar-help :hover {
+    color: #000;
+}
+
 .navbar-links li {
     margin-right: 1rem;
 }
 
 .navbar-links li a {
     text-decoration: none;
-    font-size: 1.2rem;
+    /* font-size: 3rem; */
     color: #333;
 }
 

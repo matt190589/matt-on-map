@@ -1,24 +1,30 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaBeer } from "react-icons/fa";
+import { MdInsertChartOutlined } from "react-icons/md";
+import { MdHelpOutline } from "react-icons/md";
+import { MdDarkMode } from "react-icons/md";
 
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
-        <img src="/favicon.ico" alt="Logo" />
+      <div className="navbar-help">
+        <a href="#">
+          <MdHelpOutline />
+        </a>
       </div>
       <div className="header">
-        <h1>MATT ON A MAP</h1>
+        <p>MATT ON A MAP</p>
       </div>
       <ul className="navbar-links">
         <li>
-          <a href="#">Rules</a>
+          <a href="#">
+            <MdInsertChartOutlined />
+          </a>
         </li>
         <li>
-          <a href="#">Stats</a>
-        </li>
-        <li>
-          <a href="#">Settings</a>
+          <a href="#">
+            <MdDarkMode />
+          </a>
         </li>
       </ul>
     </nav>

@@ -61,7 +61,7 @@ export default function ClueBox(props) {
       </div>
       <div className="short-column image">
         <div className="right-column">
-          <h2>Clue 4: Map outline</h2>
+          <h2>Clue 4: Map </h2>
           {guessLists.length > 3 ? (
             <div>
               <img
