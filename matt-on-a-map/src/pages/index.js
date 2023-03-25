@@ -61,34 +61,22 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="container">
+      <div class="container">
         <Navbar />
-        <div className="row">
-          <div className="column">
-            <div className="left-column clue-font">
-              <h1>Guesses</h1>
-              <h3>
-                Matt loves travelling and he's off on an adventure visiting all
-                the countries of the world. Every day he'll be in a different
-                place. Your job is to find him!
-              </h3>
-              <GuessInput
-                guessLists={guessLists}
-                onGuessListChange={handleGuessListChange}
-              />
-            </div>
-          </div>
-          <div className="column">
-            <div className="right-column">
-              <Image
-                className="image-logo"
-                src={mattLogo}
-                alt="world map"
-                width={500}
-                height={500}
-              />
-            </div>
-          </div>
+        <div class="left-column">
+          {" "}
+          <h1>Guesses</h1>
+          <h3>
+            Matt loves travelling and he's off on an adventure visiting all the
+            countries of the world. Every day he'll be in a different place.
+            Your job is to find him!
+          </h3>
+          <GuessInput
+            guessLists={guessLists}
+            onGuessListChange={handleGuessListChange}
+          />
+        </div>
+        <div class="right-column">
           <ClueBox guessLists={guessLists} dayNum={dayNum} />
         </div>
       </div>
