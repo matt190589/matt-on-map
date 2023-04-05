@@ -10,7 +10,7 @@ h3 {
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
 }
 
 .container {
@@ -30,6 +30,7 @@ body {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
     border: 1px solid #ccc;
+    color:#fff;
 }
 
 .right-column {
@@ -47,6 +48,8 @@ body {
     margin: 0 auto;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 5px #999;
+    color: #fff;
+    background-color: rgba(55, 252, 74, 0.811);;
 }
 .text-clue {
     background-color: #9ACBFF;
